@@ -19,6 +19,6 @@ class GabeSprites {
   );
     static Future<SpriteAnimation> get cross => SpriteAnimation.load(
     'characters/gabe_cross.png',
-    SpriteAnimationData.sequenced(amount: 6, stepTime: 0.15, textureSize: Vector2(64, 64))
+    SpriteAnimationData.sequenced(amount: 6, stepTime: 0.08, textureSize: Vector2(64, 64))
   );
 }

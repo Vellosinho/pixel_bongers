@@ -1,6 +1,8 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pixel_bongers/objects/car.dart';
+import 'package:pixel_bongers/objects/motorcycle.dart';
 import 'package:pixel_bongers/player/player.dart';
 
 double tileSize = 128;
@@ -53,6 +55,11 @@ class _GameState extends State<Game> {
           LogicalKeyboardKey.escape,
         ]))
       ],
+      components: [
+        Car(position: Vector2(tileSize * 0, tileSize * 3)),
+        Car(position: Vector2(tileSize * 9, tileSize * 3)),
+        Bis(position: Vector2(tileSize * 16, tileSize * 3)),
+      ],
       player: GabeGonzalez(position: Vector2(0, 0)),
       cameraConfig: CameraConfig(zoom: 1.25, moveOnlyMapArea: true),
       map: WorldMapByTiled(
@@ -60,6 +67,7 @@ class _GameState extends State<Game> {
             'untitled.tmj'),
         forceTileSize: Vector2(tileSize, tileSize),
       ),
+      // showCollisionArea: true,
     );
   }
 }
