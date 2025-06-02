@@ -53,7 +53,7 @@ class _GameState extends State<Game> {
           LogicalKeyboardKey.escape,
         ]))
       ],
-      player: PlayerOne(position: Vector2(0, 0)),
+      player: GabeGonzalez(position: Vector2(0, 0)),
       cameraConfig: CameraConfig(zoom: 1.25, moveOnlyMapArea: true),
       map: WorldMapByTiled(
         WorldMapReader.fromAsset(
