@@ -28,6 +28,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/images/characters/
+    - assets/images/characters/gabe_gonzales/
     - assets/images/map/
   #   - images/a_dot_ham.jpeg
 

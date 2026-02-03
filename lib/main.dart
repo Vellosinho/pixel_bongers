@@ -1,10 +1,11 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pixel_bongers/enemy/nazi_zombie.dart';
 import 'package:pixel_bongers/objects/car.dart';
+import 'package:pixel_bongers/objects/lamp_post.dart';
 import 'package:pixel_bongers/objects/motorcycle.dart';
 import 'package:pixel_bongers/player/player.dart';
-
 double tileSize = 128;
 // const CharacterFaction playerTwoFaction = CharacterFaction.Capitalist;
 // SimpleDirectionAnimation playerTwoAnimations = getArcherAnimations(playerTwoFaction);
@@ -57,17 +58,22 @@ class _GameState extends State<Game> {
       ],
       components: [
         Car(position: Vector2(tileSize * 0, tileSize * 3)),
+        // LampPost(position: Vector2(tileSize * 4, -  ((tileSize * 2) + 16))),
         Car(position: Vector2(tileSize * 9, tileSize * 3)),
         Bis(position: Vector2(tileSize * 16, tileSize * 3)),
+        NaziZombie(position: Vector2(tileSize * 16, tileSize * 3)),
+        ...lampPosts,
       ],
-      player: GabeGonzalez(position: Vector2(0, 0)),
+      player: GabeGonzalez(position: Vector2(0, tileSize * 5)),
       cameraConfig: CameraConfig(zoom: 1.25, moveOnlyMapArea: true),
+      // cameraConfig: CameraConfig(zoom: 1.25),
       map: WorldMapByTiled(
         WorldMapReader.fromAsset(
             'untitled.tmj'),
         forceTileSize: Vector2(tileSize, tileSize),
       ),
-      // showCollisionArea: true,
+      showCollisionArea: true,
     );
   }
 }
+

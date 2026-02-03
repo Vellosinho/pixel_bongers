@@ -10,6 +10,7 @@ class GabeGonzalez extends SimplePlayer with BlockMovementCollision {
   GabeGonzalez({required super.position})
       : super(
           speed: 200,
+          life: 100,
           size: Vector2(256, 256),
           initDirection: Direction.right,
           animation: PlayerSpriteSheet.gabeAnimations,
@@ -24,6 +25,7 @@ class GabeGonzalez extends SimplePlayer with BlockMovementCollision {
   @override
   void onJoystickAction(JoystickActionEvent event) {
     if (event.id.keyId == LogicalKeyboardKey.keyZ.keyId && !isOnCooldown) {
+      simpleAttackMelee(damage: 20, withPush: false, size: Vector2(40, 40));
       bool flipXAxis = false;
       isOnCooldown = true;
       if (lastDirection == Direction.left ||
@@ -46,6 +48,17 @@ class GabeGonzalez extends SimplePlayer with BlockMovementCollision {
     }
     return super.onJoystickAction(event);
   }
+  @override
+  void onReceiveDamage(AttackOriginEnum attacker, double damage, identify) {
+    print("ReceivedDamage");
+    // TODO: implement onReceiveDamage
+    // if(this.life < 25) {
+    animation?.playOnceOther("falling");
+    // }
+    // this.animation = PlayerSpriteSheet.fallenGabeAnimations;
+    replaceAnimation(PlayerSpriteSheet.fallenGabeAnimations);
+    super.onReceiveDamage(attacker, damage, identify);
+  }
 }
 
 class JimmyCalifornia extends SimplePlayer with BlockMovementCollision {
@@ -62,6 +75,7 @@ class JimmyCalifornia extends SimplePlayer with BlockMovementCollision {
   @override
   void onJoystickAction(JoystickActionEvent event) {
     if (event.id.keyId == LogicalKeyboardKey.keyZ.keyId && !isOnCooldown) {
+      simpleAttackMelee(damage: 20, size: Vector2(400, 400));
       bool flipXAxis = false;
       isOnCooldown = true;
       if (lastDirection == Direction.left ||

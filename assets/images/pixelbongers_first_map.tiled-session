@@ -3,17 +3,107 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "untitled.tmj",
     "expandedProjectPaths": [
+        "map",
+        "."
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "barreira_de_transito.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "bis.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "brasilia.tsj": {
+            "scaleInDock": 3
+        },
+        "casa_abandonada.tsj": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 4
+        },
+        "cones.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 5.5
+        },
+        "internet.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 8
+        },
+        "map/imobiliaria.tsj": {
+            "scaleInDock": 4,
+            "scaleInEditor": 5.5
+        },
+        "map/optica.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 5.5
+        },
+        "map/optica.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "restaurante.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "street.tsj": {
+            "scaleInDock": 3,
+            "scaleInEditor": 1
+        },
+        "tabacaria.tsj": {
+            "scaleInDock": 1
+        },
+        "untitled.tmj": {
+            "scale": 2,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 998.75,
+                "y": 54
+            }
+        },
+        "upper_street.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "walls.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
     },
+    "last.imagePath": "C:/Projetos/pixel_bongers/assets/images/map",
     "map.height": 25,
     "map.lastUsedFormat": "json",
     "map.width": 250,
     "openFiles": [
+        "untitled.tmj",
+        "map/imobiliaria.tsj",
+        "map/optica.tsj",
+        "street.tsj",
+        "casa_abandonada.tsj",
+        "internet.tsj",
+        "restaurante.tsj",
+        "walls.tsj",
+        "barreira_de_transito.tsj",
+        "bis.tsj",
+        "cones.tsj"
     ],
     "project": "pixelbongers_first_map.tiled-project",
     "recentFiles": [
-    ]
+        "cones.tsj",
+        "bis.tsj",
+        "barreira_de_transito.tsj",
+        "walls.tsj",
+        "restaurante.tsj",
+        "internet.tsj",
+        "casa_abandonada.tsj",
+        "street.tsj",
+        "map/optica.tsj",
+        "map/imobiliaria.tsj",
+        "untitled.tmj",
+        "upper_street.tsj"
+    ],
+    "tileset.lastUsedFormat": "json"
 }

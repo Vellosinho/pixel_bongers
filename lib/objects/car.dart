@@ -11,7 +11,7 @@ class Car extends GameDecoration with Attackable {
   Future<void> onLoad() async {
     add(RectangleHitbox(
       size: Vector2(320, 48),
-      position: Vector2(32, 104),
+      position: Vector2(32, 104), 
     ));
     // final program = await FragmentProgram.fromAsset('shaders/myshader.frag');
     return super.onLoad();

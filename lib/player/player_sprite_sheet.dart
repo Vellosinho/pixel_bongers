@@ -12,6 +12,13 @@ class PlayerSpriteSheet {
   static SimpleDirectionAnimation gabeAnimations = SimpleDirectionAnimation(
     idleRight: GabeSprites.idle,
     runRight: GabeSprites.walk,
+    others: {
+      "falling": GabeSprites.falling,
+    }
+  );
+  static SimpleDirectionAnimation fallenGabeAnimations = SimpleDirectionAnimation(
+    idleRight: GabeSprites.fallen,
+    runRight: GabeSprites.fallen,
   );
 
 }
