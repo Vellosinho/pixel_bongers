@@ -19,6 +19,11 @@ class GabeGonzalez extends SimplePlayer with BlockMovementCollision {
   @override
   Future<void> onLoad() {
     add(RectangleHitbox(size: Vector2(128, 32), position: Vector2(64, 208)));
+    Future.delayed(Duration(milliseconds: 500), () {
+    animation?.playOnce(GabeSprites.init).then((_) {
+      // animation?.play(SimpleAnimationEnum.idleRight);
+    });
+    });
     return super.onLoad();
   }
 
@@ -53,10 +58,15 @@ class GabeGonzalez extends SimplePlayer with BlockMovementCollision {
     print("ReceivedDamage");
     // TODO: implement onReceiveDamage
     // if(this.life < 25) {
-    animation?.playOnceOther("falling");
+    animation?.playOnceOther("falling").then((_) {
+      replaceAnimation(PlayerSpriteSheet.fallenGabeAnimations);
+      Future.delayed(Duration(milliseconds: 10), () {
+        animation?.play(SimpleAnimationEnum.idleRight);
+      });
+    });
     // }
     // this.animation = PlayerSpriteSheet.fallenGabeAnimations;
-    replaceAnimation(PlayerSpriteSheet.fallenGabeAnimations);
+    speed = 0;
     super.onReceiveDamage(attacker, damage, identify);
   }
 }

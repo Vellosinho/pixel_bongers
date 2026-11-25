@@ -57,11 +57,12 @@ class _GameState extends State<Game> {
         ]))
       ],
       components: [
-        Car(position: Vector2(tileSize * 0, tileSize * 3)),
+        Car(type: 'brasilia', position: Vector2(tileSize * 0, tileSize * 3)),
         // LampPost(position: Vector2(tileSize * 4, -  ((tileSize * 2) + 16))),
-        Car(position: Vector2(tileSize * 9, tileSize * 3)),
+        Car(type: 'fusca', position: Vector2(tileSize * 5.5, tileSize * 3)),
+        Car(type: 'brasilia', position: Vector2(tileSize * 9, tileSize * 3)),
         Bis(position: Vector2(tileSize * 16, tileSize * 3)),
-        NaziZombie(position: Vector2(tileSize * 16, tileSize * 3)),
+        // NaziZombie(position: Vector2(tileSize * 16, tileSize * 3)),
         ...lampPosts,
       ],
       player: GabeGonzalez(position: Vector2(0, tileSize * 5)),
@@ -72,7 +73,7 @@ class _GameState extends State<Game> {
             'untitled.tmj'),
         forceTileSize: Vector2(tileSize, tileSize),
       ),
-      showCollisionArea: true,
+      // showCollisionArea: true,
     );
   }
 }

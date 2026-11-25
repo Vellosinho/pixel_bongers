@@ -2,9 +2,10 @@ import 'package:bonfire/bonfire.dart';
 import 'package:pixel_bongers/objects/objects_sprite_sheets.dart';
 
 class Car extends GameDecoration with Attackable {
-  Car({required super.position})
+  String type;
+  Car({required this.type, required super.position})
       : super.withSprite(
-            sprite: ObjectsSpriteSheets.brasilia, size: Vector2(384, 256))
+            sprite: ObjectsSpriteSheets().getCarSprite(type), size: Vector2(384, 256))
   // : super.withSprite(sprite: GameObjectsSprites.anvil, position: position, size: Vector2(96, 96))
   ;
   @override

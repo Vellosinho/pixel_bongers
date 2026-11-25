@@ -1,6 +1,10 @@
 import 'package:bonfire/bonfire.dart';
 
 class GabeSprites {
+    static Future<SpriteAnimation> get init => SpriteAnimation.load(
+    'characters/gabe_gonzales/gabe_init.png',
+    SpriteAnimationData.sequenced(amount: 21, stepTime: 0.15, textureSize: Vector2(64, 64))
+  );
     static Future<SpriteAnimation> get walk => SpriteAnimation.load(
     'characters/gabe_gonzales/gabe_walk.png',
     SpriteAnimationData.sequenced(amount: 6, stepTime: 0.15, textureSize: Vector2(64, 64))
